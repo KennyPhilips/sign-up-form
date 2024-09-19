@@ -1,29 +1,138 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
+@font-face {
+    font-family: norse-bold;
+    src: url(./fonts/Norse-Bold.otf);
+}
 
-  * {
-    margin: 0;
-  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
+html {
+  margin: 0;
+}
 
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  height: 100vh;
+  font-family: sans-serif;
+  margin: 0;
+}
 
-  input, button, textarea, select {
-    font: inherit;
-  }
+#image {
+  background-image: url("./img/bg.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
 
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
+#banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0,0,0,0.5);
+  margin-top: 200px;
+  width: 400px;
+}
 
-  #root, #__next {
-    isolation: isolate;
-  }
+#banner > * {
+  margin: 0;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+#banner img {
+  width: 75px;
+  height: auto;
+}
+
+#banner h1 {
+  font-family: norse-bold;
+  font-size: 5rem;
+  color: white;
+}
+
+#credits {
+  margin-top: auto;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+#paragraph{
+  background-color: #F9FAFB;
+  padding: 10% 15% 0 3%;
+}
+
+#button-box{
+  background-color: #F9FAFB;
+  padding: 3% 15% 0 3%;
+}
+
+#form-box{
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.33);
+}
+
+#form{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  gap: 2rem;
+  padding: 0 0 0 3%;
+}
+
+#form-title {
+  padding: 0 0 0 3%;
+}
+
+#left-elements, #right-elements{
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+input {
+  height: 1.3rem;
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+#catchphrase{
+  background-color: #F9FAFB;
+  padding: 0 15% 3% 3%;
+}
+
+button {
+  background-color: #596D48;
+  border-radius: 4px;
+  color: white;
+  font-weight: 900;
+  padding: 1rem 2rem;
+}
+
+input {
+  outline: none;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+}
+
+input:focus {
+  border: 1px solid #1D4ED8;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.33);
+}
+
+input[type="email"]:invalid {
+  border: 1px solid red;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.33);
+}
